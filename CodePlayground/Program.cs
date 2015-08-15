@@ -10,9 +10,14 @@ namespace CodePlayground
     {
         static void Main(string[] args)
         {
+            var strings = GeneratedStrings();
+            // note: strings has been entirely allocated and loaded by this point
+
             // Old school way to use a sequence:
-            foreach (var item in GeneratedStrings())
+            foreach (var item in strings)
                 Console.WriteLine(item);
+
+            Console.ReadLine();
         }
 
         // Old school way to generate a sequence:
